@@ -1,0 +1,708 @@
+{
+  "nations": [
+    {
+      "name": "Commonwealth of Nations",
+      "ships": [
+        {
+          "class": "cruiser",
+          "name": "Perth",
+          "smoke": 36,
+          "tier": 6
+        }
+      ]
+    },
+    {
+      "name": "U.S.S.R.",
+      "ships": [
+        {
+          "class": "cruiser",
+          "name": "Mikhail Kutuzov",
+          "smoke": 7,
+          "tier": 8
+        },
+        {
+          "class": "destroyer",
+          "name": "Storozhevoi",
+          "smoke": 13,
+          "tier": 2
+        },
+        {
+          "class": "destroyer",
+          "name": "Derzki",
+          "smoke": 18,
+          "tier": 3
+        },
+        {
+          "class": "destroyer",
+          "name": "Izyaslav",
+          "smoke": 15,
+          "tier": 4
+        },
+        {
+          "class": "destroyer",
+          "name": "Gremyashchy",
+          "smoke": 16,
+          "tier": 5
+        },
+        {
+          "class": "destroyer",
+          "name": "Gnevny",
+          "smoke": 16,
+          "tier": 5
+        },
+        {
+          "class": "destroyer",
+          "name": "Ognevoi",
+          "smoke": 21,
+          "tier": 6
+        },
+        {
+          "class": "destroyer",
+          "name": "Kiev",
+          "smoke": 22,
+          "tier": 7
+        },
+        {
+          "class": "destroyer",
+          "name": "Leningrad",
+          "smoke": 22,
+          "tier": 7
+        },
+        {
+          "class": "destroyer",
+          "name": "Tashkent",
+          "smoke": 23,
+          "tier": 8
+        },
+        {
+          "class": "destroyer",
+          "name": "Udaloi",
+          "smoke": 24,
+          "tier": 9
+        },
+        {
+          "class": "destroyer",
+          "name": "Khabarovsk",
+          "smoke": 25,
+          "tier": 10
+        }
+      ]
+    },
+    {
+      "name": "Germany",
+      "ships": [
+        {
+          "class": "destroyer",
+          "name": "V-25",
+          "smoke": 8,
+          "tier": 2
+        },
+        {
+          "class": "destroyer",
+          "name": "G-101",
+          "smoke": 9,
+          "tier": 3
+        },
+        {
+          "class": "destroyer",
+          "name": "V-170",
+          "smoke": 10,
+          "tier": 4
+        },
+        {
+          "class": "destroyer",
+          "name": "T-22",
+          "smoke": 11,
+          "tier": 5
+        },
+        {
+          "class": "destroyer",
+          "name": "Ernst Gaede",
+          "smoke": 12,
+          "tier": 6
+        },
+        {
+          "class": "destroyer",
+          "name": "Leberecht Maass",
+          "smoke": 13,
+          "tier": 7
+        },
+        {
+          "class": "destroyer",
+          "name": "Z-23",
+          "smoke": 14,
+          "tier": 8
+        },
+        {
+          "class": "destroyer",
+          "name": "Z-46",
+          "smoke": 15,
+          "tier": 9
+        },
+        {
+          "class": "destroyer",
+          "name": "Z-52",
+          "smoke": 16,
+          "tier": 10
+        }
+      ]
+    },
+    {
+      "name": "Imperial Japanese Navy",
+      "ships": [
+        {
+          "class": "destroyer",
+          "name": "Tachibana",
+          "smoke": 13,
+          "tier": 2
+        },
+        {
+          "class": "destroyer",
+          "name": "Tachibana Lima",
+          "smoke": 13,
+          "tier": 2
+        },
+        {
+          "class": "destroyer",
+          "name": "Umikaze",
+          "smoke": 13,
+          "tier": 2
+        },
+        {
+          "class": "destroyer",
+          "name": "Wakatake",
+          "smoke": 18,
+          "tier": 3
+        },
+        {
+          "class": "destroyer",
+          "name": "Isokaze",
+          "smoke": 19,
+          "tier": 4
+        },
+        {
+          "class": "destroyer",
+          "name": "Minekaze",
+          "smoke": 16,
+          "tier": 5
+        },
+        {
+          "class": "destroyer",
+          "name": "Fūjin",
+          "smoke": 16,
+          "tier": 5
+        },
+        {
+          "class": "destroyer",
+          "name": "Kamikaze",
+          "smoke": 16,
+          "tier": 5
+        },
+        {
+          "class": "destroyer",
+          "name": "Mutsuki",
+          "smoke": 16,
+          "tier": 5
+        },
+        {
+          "class": "destroyer",
+          "name": "Fubuki",
+          "smoke": 21,
+          "tier": 6
+        },
+        {
+          "class": "destroyer",
+          "name": "Hatsuharu",
+          "smoke": 21,
+          "tier": 6
+        },
+        {
+          "class": "destroyer",
+          "name": "Shinonome",
+          "smoke": 21,
+          "tier": 6
+        },
+        {
+          "class": "destroyer",
+          "name": "Akatsuki",
+          "smoke": 22,
+          "tier": 7
+        },
+        {
+          "class": "destroyer",
+          "name": "Shiratsuyu",
+          "smoke": 22,
+          "tier": 7
+        },
+        {
+          "class": "destroyer",
+          "name": "Akizuki",
+          "smoke": 23,
+          "tier": 8
+        },
+        {
+          "class": "destroyer",
+          "name": "Kagero",
+          "smoke": 23,
+          "tier": 8
+        },
+        {
+          "class": "destroyer",
+          "name": "Yūgumo",
+          "smoke": 24,
+          "tier": 9
+        },
+        {
+          "class": "destroyer",
+          "name": "Shimakaze",
+          "smoke": 25,
+          "tier": 10
+        },
+        {
+          "class": "cruiser",
+          "name": "Iwaki",
+          "smoke": 6,
+          "tier": 4
+        }
+      ]
+    },
+    {
+      "name": "Pan-Asia",
+      "ships": [
+        {
+          "class": "destroyer",
+          "name": "Anshan",
+          "smoke": 21,
+          "tier": 6
+        },
+        {
+          "class": "destroyer",
+          "name": "Lo Yang",
+          "smoke": 16,
+          "tier": 33
+        }
+      ]
+    },
+    {
+      "name": "Poland",
+      "ships": [
+        {
+          "class": "destroyer",
+          "name": "Błyskawica",
+          "smoke": 22,
+          "tier": 7
+        }
+      ]
+    },
+    {
+      "name": "United Kingdom",
+      "ships": [
+        {
+          "class": "destroyer",
+          "name": "Campbeltown",
+          "smoke": 29,
+          "tier": 3
+        },
+        {
+          "class": "cruiser",
+          "name": "Emerald",
+          "smoke": 0,
+          "tier": 5
+        },
+        {
+          "class": "cruiser",
+          "name": "Leander",
+          "smoke": 1,
+          "tier": 6
+        },
+        {
+          "class": "cruiser",
+          "name": "Fiji",
+          "smoke": 2,
+          "tier": 7
+        },
+        {
+          "class": "cruiser",
+          "name": "Belfast",
+          "smoke": 2,
+          "tier": 7
+        },
+        {
+          "class": "cruiser",
+          "name": "Edinburgh",
+          "smoke": 3,
+          "tier": 8
+        },
+        {
+          "class": "cruiser",
+          "name": "Neptune",
+          "smoke": 4,
+          "tier": 9
+        },
+        {
+          "class": "cruiser",
+          "name": "Minotaur",
+          "smoke": 5,
+          "tier": 10
+        }
+      ]
+    },
+    {
+      "name": "United States",
+      "ships": [
+        {
+          "class": "cruiser",
+          "name": "Flint",
+          "smoke": 32,
+          "tier": 7
+        },
+        {
+          "class": "destroyer",
+          "name": "Sampson",
+          "smoke": 26,
+          "tier": 2
+        },
+        {
+          "class": "destroyer",
+          "name": "Smith",
+          "smoke": 26,
+          "tier": 2
+        },
+        {
+          "class": "destroyer",
+          "name": "Wickes",
+          "smoke": 27,
+          "tier": 3
+        },
+        {
+          "class": "destroyer",
+          "name": "Clemson",
+          "smoke": 28,
+          "tier": 4
+        },
+        {
+          "class": "destroyer",
+          "name": "Nicholas",
+          "smoke": 29,
+          "tier": 5
+        },
+        {
+          "class": "destroyer",
+          "name": "Farragut",
+          "smoke": 30,
+          "tier": 6
+        },
+        {
+          "class": "destroyer",
+          "name": "Mahan",
+          "smoke": 31,
+          "tier": 7
+        },
+        {
+          "class": "destroyer",
+          "name": "Sims",
+          "smoke": 31,
+          "tier": 7
+        },
+        {
+          "class": "destroyer",
+          "name": "Benson",
+          "smoke": 33,
+          "tier": 8
+        },
+        {
+          "class": "destroyer",
+          "name": "Fletcher",
+          "smoke": 34,
+          "tier": 9
+        },
+        {
+          "class": "destroyer",
+          "name": "Black",
+          "smoke": 34,
+          "tier": 9
+        },
+        {
+          "class": "destroyer",
+          "name": "Gearing",
+          "smoke": 35,
+          "tier": 10
+        }
+      ]
+    }
+  ],
+  "smoke": [
+    {
+      "class": "cruiser",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 96,
+      "emissionTime": 7,
+      "id": 0
+    },
+    {
+      "class": "cruiser",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 99,
+      "emissionTime": 7,
+      "id": 1
+    },
+    {
+      "class": "cruiser",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 103,
+      "emissionTime": 7,
+      "id": 2
+    },
+    {
+      "class": "cruiser",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 106,
+      "emissionTime": 7,
+      "id": 3
+    },
+    {
+      "class": "cruiser",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 110,
+      "emissionTime": 7,
+      "id": 4
+    },
+    {
+      "class": "cruiser",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 113,
+      "emissionTime": 7,
+      "id": 5
+    },
+    {
+      "class": "cruiser",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 80,
+      "emissionTime": 15,
+      "id": 6
+    },
+    {
+      "class": "cruiser",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 89,
+      "emissionTime": 20,
+      "id": 7
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 45,
+      "emissionTime": 20,
+      "id": 8
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 49,
+      "emissionTime": 20,
+      "id": 9
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 53,
+      "emissionTime": 20,
+      "id": 10
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 57,
+      "emissionTime": 20,
+      "id": 11
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 61,
+      "emissionTime": 20,
+      "id": 12
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 65,
+      "emissionTime": 20,
+      "id": 13
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 73,
+      "emissionTime": 20,
+      "id": 15
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 77,
+      "emissionTime": 20,
+      "id": 16
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 69,
+      "emissionTime": 20,
+      "id": 18
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 73,
+      "emissionTime": 20,
+      "id": 19
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 81,
+      "emissionTime": 20,
+      "id": 21
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 85,
+      "emissionTime": 20,
+      "id": 22
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 89,
+      "emissionTime": 20,
+      "id": 23
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 93,
+      "emissionTime": 20,
+      "id": 24
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 97,
+      "emissionTime": 20,
+      "id": 25
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 106,
+      "emissionTime": 22,
+      "id": 26
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 109,
+      "emissionTime": 23,
+      "id": 27
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 112,
+      "emissionTime": 24,
+      "id": 28
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 115,
+      "emissionTime": 25,
+      "id": 29
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 118,
+      "emissionTime": 26,
+      "id": 30
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 121,
+      "emissionTime": 27,
+      "id": 31
+    },
+    {
+      "class": "cruiser",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 121,
+      "emissionTime": 27,
+      "id": 32
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 124,
+      "emissionTime": 28,
+      "id": 33
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 127,
+      "emissionTime": 29,
+      "id": 34
+    },
+    {
+      "class": "destroyer",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 130,
+      "emissionTime": 30,
+      "id": 35
+    },
+    {
+      "class": "cruiser",
+      "coolDown1": 240,
+      "coolDown2": 160,
+      "durationTime": 10,
+      "emissionTime": 90,
+      "id": 36
+    }
+  ]
+}
