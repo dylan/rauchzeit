@@ -25,17 +25,18 @@ extension ShipSection: SectionModelType {
 }
 
 final class ShipTableViewController: UITableViewController {
+    private let bag = DisposeBag()
 
-    let model = Model()
     let dataSource = RxTableViewSectionedReloadDataSource<ShipSection>()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         sharedInit()
     }
 
     func sharedInit() {
-        guard let localModel = model else {
+        guard let parent = self.presentingViewController as? ViewController,
+              let localModel = parent.model else {
             return
         }
 
@@ -58,9 +59,15 @@ final class ShipTableViewController: UITableViewController {
         _ = Observable.just(sections)
                       .bindTo(tableView.rx.items(dataSource: dataSource))
 
-        _ = tableView.rx.itemSelected.subscribe({
-            print($0)
-        })
+        _ = tableView.rx.itemSelected
+            .asObservable()
+            .subscribe(onNext: { [weak self] in
+                guard let vc = self?.presentingViewController as? ViewController else {
+                    return
+                }
+                vc.currentShip.value = sections[$0.section].items[$0.row]
+                vc.dismiss(animated: true)
+            }).addDisposableTo(bag)
     }
 
 }

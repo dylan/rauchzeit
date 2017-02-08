@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,24 +18,57 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsX-2n-Yb1">
-                                <rect key="frame" x="-0.5" y="592" width="375" height="75"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cnd-aQ-gu2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRN-n8-Gim">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="661"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-Cx-lsQ">
+                                                <rect key="frame" x="0.0" y="314" width="414" height="34"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="Lpw-Cx-lsQ" firstAttribute="width" secondItem="RRN-n8-Gim" secondAttribute="width" id="Gdv-mR-Vfn"/>
+                                            <constraint firstItem="Lpw-Cx-lsQ" firstAttribute="centerX" secondItem="RRN-n8-Gim" secondAttribute="centerX" id="iaf-N7-ASC"/>
+                                            <constraint firstItem="Lpw-Cx-lsQ" firstAttribute="centerY" secondItem="RRN-n8-Gim" secondAttribute="centerY" id="yxP-14-Vs0"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsX-2n-Yb1">
+                                        <rect key="frame" x="20" y="661" width="374" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="BsI-Ww-gSr"/>
+                                        </constraints>
+                                        <state key="normal" title="Choose a vessel..."/>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="BsI-Ww-gSr"/>
+                                    <constraint firstItem="RRN-n8-Gim" firstAttribute="width" secondItem="cnd-aQ-gu2" secondAttribute="width" id="7Sl-dC-Fe5"/>
+                                    <constraint firstItem="TsX-2n-Yb1" firstAttribute="width" secondItem="cnd-aQ-gu2" secondAttribute="width" constant="-40" id="kpG-91-9k1"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="TsX-2n-Yb1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aF5-r9-KlV"/>
-                            <constraint firstItem="TsX-2n-Yb1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="mk9-HB-Ou8"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TsX-2n-Yb1" secondAttribute="bottom" id="q2L-M5-8On"/>
+                            <constraint firstItem="cnd-aQ-gu2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KHW-J3-Tas"/>
+                            <constraint firstItem="cnd-aQ-gu2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="WTp-oK-kWS"/>
+                            <constraint firstItem="cnd-aQ-gu2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cMg-Ki-4Ds"/>
+                            <constraint firstItem="cnd-aQ-gu2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vKy-rc-YkR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="choiceButton" destination="TsX-2n-Yb1" id="9DZ-hD-Zcg"/>
+                        <outlet property="clockFace" destination="Lpw-Cx-lsQ" id="KOW-Kp-YvK"/>
+                        <outlet property="clockView" destination="RRN-n8-Gim" id="CzT-l3-zg0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,15 +78,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="ShipTableViewController" id="W9e-rr-S4k" customClass="ShipTableViewController" customModule="Rauchzeit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="z5V-Ye-JZS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Cft-Fq-1ny">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cft-Fq-1ny" id="llE-am-tHA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -63,8 +96,16 @@
                             <outlet property="delegate" destination="W9e-rr-S4k" id="E4a-XA-mAH"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMK-I4-UzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationBar contentMode="scaleToFill" id="4zZ-GE-q8d">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Title" id="T7I-dz-XoB"/>
+                    </items>
+                </navigationBar>
             </objects>
             <point key="canvasLocation" x="729" y="35"/>
         </scene>

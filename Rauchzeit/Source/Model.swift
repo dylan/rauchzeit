@@ -31,12 +31,16 @@ public struct Model {
               let jsonNations = values["nations"] as? [[String: Any]] else {
                 return nil
         }
-        smokes = jsonSmokes.map({ Ship.Smoke(json: $0) }).flatMap({ $0 })
+        smokes = jsonSmokes
+                    .map({ Ship.Smoke(json: $0) })
+                    .flatMap({ $0 })
 
-        nations = jsonNations.map({
-            guard let jsonNation = $0["name"] as? String else { return nil }
-            return Ship.Nation(rawValue: jsonNation)
-        }).flatMap({ $0 })
+        nations = jsonNations
+                    .map({
+                        guard let jsonNation = $0["name"] as? String else { return nil }
+                        return Ship.Nation(rawValue: jsonNation)
+                    })
+                    .flatMap({ $0 })
 
         var tempShips: [Ship] = []
         for value in jsonNations {

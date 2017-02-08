@@ -7,6 +7,14 @@
 //
 
 public struct Ship {
+    public let name: String
+    public let nation: Ship.Nation
+    public let tier: Ship.Tier
+    public let smoke: Ship.Smoke
+    public let `class`: Ship.Class
+}
+
+extension Ship {
     public enum Tier: UInt {
         case i      = 1
         case ii     = 2
@@ -44,12 +52,38 @@ public struct Ship {
             }
         }
     }
+}
 
-    public enum Class: String {
-        case cruiser    = "cruiser"
-        case destroyer  = "destroyer"
+extension Ship {
+    public struct Smoke {
+        let id: UInt
+        let `class`: Ship.Class
+        let cooldown1: UInt
+        let cooldown2: UInt
+        let emissionTime: UInt
+        let durationTime: UInt
+
+        public init?(json: [String: Any]) {
+            guard let jsonClass       = json["class"] as? String,
+                let classEnum         = Ship.Class(rawValue: jsonClass),
+                let jsonID            = json["id"] as? UInt,
+                let jsonCooldown1     = json["coolDown1"] as? UInt,
+                let jsonCooldown2     = json["coolDown2"] as? UInt,
+                let jsonDurationTime  = json["durationTime"] as? UInt,
+                let jsonEmissionTime  = json["emissionTime"] as? UInt else {
+                    return nil
+            }
+            self.id      = jsonID
+            self.`class` = classEnum
+            cooldown1    = jsonCooldown1
+            cooldown2    = jsonCooldown2
+            emissionTime = jsonEmissionTime
+            durationTime = jsonDurationTime
+        }
     }
+}
 
+extension Ship {
     public enum Nation: String {
         case commonWealth = "Commonwealth of Nations"
         case ussr         = "U.S.S.R."
@@ -60,35 +94,11 @@ public struct Ship {
         case japan        = "Imperial Japanese Navy"
         case uk           = "United Kingdom"
     }
+}
 
-    public struct Smoke {
-        let id: UInt
-        let `class`: Ship.Class
-        let cooldown1: UInt
-        let cooldown2: UInt
-        let emissionTime: UInt
-
-        public init?(json: [String: Any]) {
-            guard let jsonClass         = json["class"] as? String,
-                  let classEnum         = Ship.Class(rawValue: jsonClass),
-                  let jsonID            = json["id"] as? UInt,
-                  let jsonCooldown1     = json["coolDown1"] as? UInt,
-                  let jsonCooldown2     = json["coolDown2"] as? UInt,
-                  let jsonEmissionTime  = json["emissionTime"] as? UInt else {
-                    return nil
-            }
-            self.id      = jsonID
-            self.`class` = classEnum
-            cooldown1    = jsonCooldown1
-            cooldown2    = jsonCooldown2
-            emissionTime = jsonEmissionTime
-        }
+extension Ship {
+    public enum Class: String {
+        case cruiser    = "cruiser"
+        case destroyer  = "destroyer"
     }
-
-
-    public let name: String
-    public let nation: Ship.Nation
-    public let tier: Ship.Tier
-    public let smoke: Ship.Smoke
-    public let `class`: Ship.Class
 }
