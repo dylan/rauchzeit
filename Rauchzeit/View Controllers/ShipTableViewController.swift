@@ -70,4 +70,8 @@ final class ShipTableViewController: UITableViewController {
             }).addDisposableTo(bag)
     }
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
 }

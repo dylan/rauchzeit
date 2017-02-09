@@ -27,9 +27,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRN-n8-Gim">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="661"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-Cx-lsQ">
-                                                <rect key="frame" x="0.0" y="314" width="414" height="34"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-Cx-lsQ">
+                                                <rect key="frame" x="0.0" y="293" width="414" height="75"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="64"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -76,7 +76,7 @@
         <!--Ship Table View Controller-->
         <scene sceneID="Q8c-9A-df4">
             <objects>
-                <tableViewController storyboardIdentifier="ShipTableViewController" id="W9e-rr-S4k" customClass="ShipTableViewController" customModule="Rauchzeit" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ShipTableViewController" modalPresentationStyle="currentContext" id="W9e-rr-S4k" customClass="ShipTableViewController" customModule="Rauchzeit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="z5V-Ye-JZS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +97,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMK-I4-UzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationBar contentMode="scaleToFill" id="4zZ-GE-q8d">

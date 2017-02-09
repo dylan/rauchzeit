@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		FC9A0EC01E4B819400AD9A35 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9A0EBF1E4B819400AD9A35 /* RxDataSources.framework */; };
+		FC9A0EC41E4BD11900AD9A35 /* 1-tone.caf in Resources */ = {isa = PBXBuildFile; fileRef = FC9A0EC11E4BD11900AD9A35 /* 1-tone.caf */; };
+		FC9A0EC51E4BD11900AD9A35 /* 2-tones.caf in Resources */ = {isa = PBXBuildFile; fileRef = FC9A0EC21E4BD11900AD9A35 /* 2-tones.caf */; };
+		FC9A0EC61E4BD11900AD9A35 /* 8-tones.caf in Resources */ = {isa = PBXBuildFile; fileRef = FC9A0EC31E4BD11900AD9A35 /* 8-tones.caf */; };
+		FC9A0ECA1E4BD87600AD9A35 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9A0EC81E4BD87600AD9A35 /* Fabric.framework */; };
+		FC9A0ECB1E4BD87600AD9A35 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9A0EC91E4BD87600AD9A35 /* Crashlytics.framework */; };
 		FCACD48D1E4B39C300550FD3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACD48C1E4B39C300550FD3 /* Model.swift */; };
 		FCE0B6021E4B685D00D03176 /* ShipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE0B5FF1E4B685D00D03176 /* ShipTableViewController.swift */; };
 		FCE0B6031E4B685D00D03176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE0B6001E4B685D00D03176 /* ViewController.swift */; };
@@ -24,6 +29,11 @@
 
 /* Begin PBXFileReference section */
 		FC9A0EBF1E4B819400AD9A35 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
+		FC9A0EC11E4BD11900AD9A35 /* 1-tone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-tone.caf"; sourceTree = "<group>"; };
+		FC9A0EC21E4BD11900AD9A35 /* 2-tones.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-tones.caf"; sourceTree = "<group>"; };
+		FC9A0EC31E4BD11900AD9A35 /* 8-tones.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "8-tones.caf"; sourceTree = "<group>"; };
+		FC9A0EC81E4BD87600AD9A35 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		FC9A0EC91E4BD87600AD9A35 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		FCACD48C1E4B39C300550FD3 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Source/Model.swift; sourceTree = "<group>"; };
 		FCE0B5FF1E4B685D00D03176 /* ShipTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipTableViewController.swift; sourceTree = "<group>"; };
 		FCE0B6001E4B685D00D03176 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,7 +47,6 @@
 		FCE21B161E4B35770080BC06 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		FCE21B171E4B35770080BC06 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		FCE21B181E4B35770080BC06 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		FCE21B191E4B35770080BC06 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		FCE21B201E4B37A70080BC06 /* Ship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ship.swift; path = Source/Ship.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,8 +56,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCE21B1B1E4B35770080BC06 /* RxCocoa.framework in Frameworks */,
+				FC9A0ECA1E4BD87600AD9A35 /* Fabric.framework in Frameworks */,
 				FCE21B1A1E4B35770080BC06 /* RxBlocking.framework in Frameworks */,
 				FCE21B1C1E4B35770080BC06 /* RxSwift.framework in Frameworks */,
+				FC9A0ECB1E4BD87600AD9A35 /* Crashlytics.framework in Frameworks */,
 				FC9A0EC01E4B819400AD9A35 /* RxDataSources.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +105,9 @@
 		FCE21AFF1E4B33840080BC06 /* Rauchzeit */ = {
 			isa = PBXGroup;
 			children = (
+				FC9A0EC11E4BD11900AD9A35 /* 1-tone.caf */,
+				FC9A0EC21E4BD11900AD9A35 /* 2-tones.caf */,
+				FC9A0EC31E4BD11900AD9A35 /* 8-tones.caf */,
 				FCE0B6041E4B687400D03176 /* AppDelegate.swift */,
 				FCE21B071E4B33840080BC06 /* Assets.xcassets */,
 				FCE21B0C1E4B33840080BC06 /* Info.plist */,
@@ -109,11 +123,12 @@
 		FCE21B151E4B35630080BC06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC9A0EC81E4BD87600AD9A35 /* Fabric.framework */,
+				FC9A0EC91E4BD87600AD9A35 /* Crashlytics.framework */,
 				FC9A0EBF1E4B819400AD9A35 /* RxDataSources.framework */,
 				FCE21B161E4B35770080BC06 /* RxBlocking.framework */,
 				FCE21B171E4B35770080BC06 /* RxCocoa.framework */,
 				FCE21B181E4B35770080BC06 /* RxSwift.framework */,
-				FCE21B191E4B35770080BC06 /* RxTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,6 +144,8 @@
 				FCE21AFA1E4B33840080BC06 /* Frameworks */,
 				FCE21AFB1E4B33840080BC06 /* Resources */,
 				FCE21B141E4B35000080BC06 /* Carthage */,
+				FC9A0EC71E4BD84600AD9A35 /* Fabric */,
+				FC53D4D41E4CE9570059311D /* Build Increment */,
 			);
 			buildRules = (
 			);
@@ -180,7 +197,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCE21B0B1E4B33840080BC06 /* LaunchScreen.storyboard in Resources */,
+				FC9A0EC51E4BD11900AD9A35 /* 2-tones.caf in Resources */,
 				FCE21B131E4B33DC0080BC06 /* Smoke.json in Resources */,
+				FC9A0EC61E4BD11900AD9A35 /* 8-tones.caf in Resources */,
+				FC9A0EC41E4BD11900AD9A35 /* 1-tone.caf in Resources */,
 				FCE21B081E4B33840080BC06 /* Assets.xcassets in Resources */,
 				FCE21B061E4B33840080BC06 /* Main.storyboard in Resources */,
 			);
@@ -189,6 +209,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		FC53D4D41E4CE9570059311D /* Build Increment */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Increment";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+		FC9A0EC71E4BD84600AD9A35 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 7dee18ac0ff6fefd4a1efc2a3cb3eed76989cd87 ae424e6da49cd223becd901e6970bdb0c00e8b3b45a5f9c19e1bd8076f3874ee";
+		};
 		FCE21B141E4B35000080BC06 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -330,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -343,16 +391,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2UJ5F4MU5U;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Rauchzeit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.bvr.rauchzeit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -363,16 +416,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2UJ5F4MU5U;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Rauchzeit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.bvr.rauchzeit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
