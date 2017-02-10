@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     public let model = Model()
     public var currentShip = Variable<Ship?>(nil)
 
+    private var isOn: Bool = false
+
     private var startTime: TimeInterval = 0.0
     private var endTime: TimeInterval   = 0.0
     private var timeObserver: Disposable?
@@ -25,6 +27,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var choiceButton: UIButton!
     @IBOutlet weak var clockView: UIView!
     @IBOutlet weak var clockFace: UILabel!
+    @IBOutlet weak var settingsButton: UIButton!
 
     var oneTone: AVAudioPlayer!
     var twoTone: AVAudioPlayer!
@@ -33,6 +36,25 @@ class ViewController: UIViewController {
     var halfwayPointPlayed = false
     var endPlayed = false
     var startPlayed = false
+
+
+
+    var shouldVibrate: Bool {
+        return UserDefaults.standard.value(forKey: "vibrate") as? Bool ?? true
+    }
+
+    var shouldTone: Bool {
+        return UserDefaults.standard.value(forKey: "tone") as? Bool ?? true
+    }
+
+    var preventSleep: Bool {
+        return UserDefaults.standard.value(forKey: "preventSleep") as? Bool ?? false
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIApplication.shared.isIdleTimerDisabled = preventSleep
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,14 +74,6 @@ class ViewController: UIViewController {
         }
         prepAudio()
 
-        choiceButton.rx.tap.subscribe(onNext: { [weak self] in
-            guard let vc = self?.storyboard?.instantiateViewController(withIdentifier: "ShipTableViewController") as? ShipTableViewController else {
-                return
-            }
-
-            self?.present(vc, animated: true)
-        }).addDisposableTo(bag)
-
         currentShip.asObservable().subscribe({ [weak self] in
             guard case .next(let element) = $0,
                   let ship = element else {
@@ -74,12 +88,7 @@ class ViewController: UIViewController {
 
         }).addDisposableTo(bag)
 
-        self.setupGestures()
-    }
-
-    func setupGestures() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        clockView.addGestureRecognizer(tapGesture)
+        clockView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
 
     func handleTap(sender: UITapGestureRecognizer) {
@@ -89,7 +98,7 @@ class ViewController: UIViewController {
 
         halfwayPointPlayed = false
         knock()
-        
+
         stopAudio()
         timeObserver?.dispose()
 
@@ -99,7 +108,12 @@ class ViewController: UIViewController {
 
         updateClockFace(with: duration)
 
-        timeObserver = Observable<Int>.interval(0.075, scheduler: MainScheduler.instance).subscribe(tick)
+        if isOn == false {
+            timeObserver = Observable<Int>.interval(0.075, scheduler: MainScheduler.instance).subscribe(tick)
+            isOn = true
+        } else {
+            isOn = false
+        }
     }
 
     func stopAudio() {
@@ -129,14 +143,25 @@ class ViewController: UIViewController {
         if duration <= 0 {
             duration = Double(ship.smoke.durationTime)
             timeObserver?.dispose()
-            eightTone.play()
+            isOn = false
+
+            if shouldTone {
+                eightTone.play()
+            }
+
             knock(type: .error)
+            flash(3)
         }
 
         if duration < Double(ship.smoke.durationTime / 2) && halfwayPointPlayed == false {
             halfwayPointPlayed = true
-            twoTone.play()
+
+            if shouldTone {
+                twoTone.play()
+            }
+
             knock(type: .warning)
+            flash(2)
         }
 
         updateClockFace(with: duration)
@@ -151,6 +176,10 @@ class ViewController: UIViewController {
     }
 
     func knock(type: UINotificationFeedbackType = .success) {
+        guard shouldVibrate else {
+            return
+        }
+
         let feedbackGenerator = UINotificationFeedbackGenerator()
         feedbackGenerator.notificationOccurred(type)
         
@@ -186,6 +215,30 @@ class ViewController: UIViewController {
             }
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
             self?.vibrateCounter -= 1
+        }
+    }
+
+    var flashCounter: UInt = 0
+    var flashOn = false
+    func flash(_ times: UInt) {
+        flashCounter = times
+        Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { [weak self] timer in
+            guard let flashCount = self?.flashCounter,
+                  let flashOn = self?.flashOn,
+                  flashCount != 0 else {
+                timer.invalidate()
+                self?.clockFace.textColor = UIColor.white
+                self?.flashOn = false
+                return
+            }
+            if !flashOn {
+                self?.clockFace.textColor = UIColor(red: 164/255, green: 59/255, blue: 60/255, alpha: 1.0)
+                self?.flashOn = true
+            } else {
+                self?.clockFace.textColor = UIColor.white
+                self?.flashOn = false
+            }
+            self?.flashCounter -= 1
         }
     }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC53D4D61E4D11130059311D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53D4D51E4D11130059311D /* SettingsTableViewController.swift */; };
+		FC53D4D81E4D47110059311D /* BlenderIOS-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC53D4D71E4D47110059311D /* BlenderIOS-Regular.otf */; };
 		FC9A0EC01E4B819400AD9A35 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9A0EBF1E4B819400AD9A35 /* RxDataSources.framework */; };
 		FC9A0EC41E4BD11900AD9A35 /* 1-tone.caf in Resources */ = {isa = PBXBuildFile; fileRef = FC9A0EC11E4BD11900AD9A35 /* 1-tone.caf */; };
 		FC9A0EC51E4BD11900AD9A35 /* 2-tones.caf in Resources */ = {isa = PBXBuildFile; fileRef = FC9A0EC21E4BD11900AD9A35 /* 2-tones.caf */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC53D4D51E4D11130059311D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		FC53D4D71E4D47110059311D /* BlenderIOS-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BlenderIOS-Regular.otf"; path = "../../../Dropbox/fonts/Blender DGV/BlenderIOS-Regular.otf"; sourceTree = "<group>"; };
 		FC9A0EBF1E4B819400AD9A35 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		FC9A0EC11E4BD11900AD9A35 /* 1-tone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-tone.caf"; sourceTree = "<group>"; };
 		FC9A0EC21E4BD11900AD9A35 /* 2-tones.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-tones.caf"; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			children = (
 				FCE0B5FF1E4B685D00D03176 /* ShipTableViewController.swift */,
 				FCE0B6001E4B685D00D03176 /* ViewController.swift */,
+				FC53D4D51E4D11130059311D /* SettingsTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		FCE21AFF1E4B33840080BC06 /* Rauchzeit */ = {
 			isa = PBXGroup;
 			children = (
+				FC53D4D71E4D47110059311D /* BlenderIOS-Regular.otf */,
 				FC9A0EC11E4BD11900AD9A35 /* 1-tone.caf */,
 				FC9A0EC21E4BD11900AD9A35 /* 2-tones.caf */,
 				FC9A0EC31E4BD11900AD9A35 /* 8-tones.caf */,
@@ -199,6 +205,7 @@
 				FCE21B0B1E4B33840080BC06 /* LaunchScreen.storyboard in Resources */,
 				FC9A0EC51E4BD11900AD9A35 /* 2-tones.caf in Resources */,
 				FCE21B131E4B33DC0080BC06 /* Smoke.json in Resources */,
+				FC53D4D81E4D47110059311D /* BlenderIOS-Regular.otf in Resources */,
 				FC9A0EC61E4BD11900AD9A35 /* 8-tones.caf in Resources */,
 				FC9A0EC41E4BD11900AD9A35 /* 1-tone.caf in Resources */,
 				FCE21B081E4B33840080BC06 /* Assets.xcassets in Resources */,
@@ -264,6 +271,7 @@
 			files = (
 				FCE0B6051E4B687400D03176 /* AppDelegate.swift in Sources */,
 				FCE0B6021E4B685D00D03176 /* ShipTableViewController.swift in Sources */,
+				FC53D4D61E4D11130059311D /* SettingsTableViewController.swift in Sources */,
 				FCE21B211E4B37A70080BC06 /* Ship.swift in Sources */,
 				FCE0B6031E4B685D00D03176 /* ViewController.swift in Sources */,
 				FCACD48D1E4B39C300550FD3 /* Model.swift in Sources */,

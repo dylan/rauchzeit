@@ -43,6 +43,7 @@ final class ShipTableViewController: UITableViewController {
         dataSource.configureCell = { ds, tv, ip, item in
             let cell = tv.dequeueReusableCell(withIdentifier: "Cell", for: ip)
             cell.textLabel?.text = "\(item.name)"
+            cell.detailTextLabel?.text = "\(item.smoke.durationTime)s"
             return cell
         }
 
@@ -68,6 +69,26 @@ final class ShipTableViewController: UITableViewController {
                 vc.currentShip.value = sections[$0.section].items[$0.row]
                 vc.dismiss(animated: true)
             }).addDisposableTo(bag)
+    }
+
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = UIColor(colorLiteralRed: 164/255, green: 59/255, blue: 60/255, alpha: 1.0)
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = tableView.backgroundColor
+        header.backgroundView = UIView(frame: header.bounds)
+        header.backgroundView?.backgroundColor = view.tintColor
+    }
+
+    override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.backgroundColor = tableView.tintColor
+        cell?.textLabel?.textColor = tableView.backgroundColor
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.backgroundColor = tableView.tintColor
+        cell?.textLabel?.textColor = tableView.backgroundColor
     }
 
     override var prefersStatusBarHidden: Bool {
